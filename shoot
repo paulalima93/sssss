@@ -1,0 +1,10 @@
+shoot() {
+      var newAngle = cannon.angle - 28;
+      var velocity = p5.Vector.fromAngle(radians(newAngle));
+      velocity.mult(10);
+      Matter.Body.setStatic(this.body, false);
+      Matter.Body.setVelocity(this.body, {
+          x: velocity.x, 
+          y: velocity.y 
+      });
+    }
